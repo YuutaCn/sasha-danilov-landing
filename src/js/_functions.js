@@ -67,7 +67,11 @@ import { mobileCheck } from "./functions/mobile-check";
 
 // Подключение плавной прокрутки к якорям
 import SmoothScroll from 'smooth-scroll';
-const scroll = new SmoothScroll('a[href*="#"]');
+const scroll = new SmoothScroll('a[href*="#"]', {
+  easing: 'easeInOutCubic',
+  speed: 1000,
+  header: '.header',
+});
 
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';
