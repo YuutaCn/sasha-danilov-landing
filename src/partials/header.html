@@ -1,3 +1,30 @@
 <header class="header">
-  <div class="header__container container"></div>
+  <div class="header__container container">
+    <nav class="nav header__nav" title="Navigation">
+      <ul class="header__nav-list list-reset">
+        <li class="header__nav-list-item">
+          <a href="/" class="header__nav-list-item-href --active de">Startseite</a>
+          <a href="/" class="header__nav-list-item-href --active ru">home</a>
+          <a href="/" class="header__nav-list-item-href --active en">home</a>
+        </li>
+        <li class="header__nav-list-item">
+          <a href="/about" class="header__nav-list-item-href de">über</a>
+          <a href="/about" class="header__nav-list-item-href ru">обо мне</a>
+          <a href="/about" class="header__nav-list-item-href en">about</a>
+        </li>
+        <li class="header__nav-list-item">
+          <a href="/contact" class="header__nav-list-item-href de">Kontakt</a>
+          <a href="/contact" class="header__nav-list-item-href ru">контакты</a>
+          <a href="/contact" class="header__nav-list-item-href en">contact</a>
+        </li>
+        <li class="header__nav-list-item">
+          <select class="header__nav-list-item-lang" name="change language" id="language">
+            <option value="de" data-language>DE</option>
+            <option value="en" data-language>EN</option>
+            <option value="ru" data-language>RU</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
