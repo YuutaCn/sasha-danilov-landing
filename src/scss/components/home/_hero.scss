@@ -39,6 +39,10 @@
         font-size: 49px;
         line-height: 59px;
         letter-spacing: 0.11em;
+
+        @include big-desktop {
+          font-size: 44px;
+        }
       }
 
       &-btn {
@@ -52,6 +56,11 @@
         cursor: pointer;
         transition: scale 250ms var(--default-cubic),
           transform 250ms var(--default-cubic);
+
+          @include big-desktop {
+            width: 60px;
+            height: 60px;
+          }
 
         &:hover {
           transform: scale(1.1);
