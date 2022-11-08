@@ -36,6 +36,11 @@
       width: 850px;
       font-size: 20px;
     }
+
+    @include small-tablet {
+      width: 100%;
+      font-size: 18px;
+    }
   }
 
   &__more {

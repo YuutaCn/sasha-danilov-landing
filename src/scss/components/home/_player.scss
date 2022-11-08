@@ -14,6 +14,11 @@
       height: 90px;
       gap: 10px;
     }
+
+    @include small-tablet {
+      height: 200px;
+      flex-wrap: wrap;
+    }
   }
 
   &__container {
@@ -60,6 +65,11 @@
     @include tablet {
       width: 90px;
       height: 90px;
+    }
+
+    @include small-tablet {
+      width: 100px;
+      height: 100px;
     }
 
     &-img {
@@ -138,6 +148,11 @@
     justify-content: space-between;
     padding: 5px 0px;
 
+    @include tablet {
+      width: auto;
+      height: 100px;
+    }
+
     &-text {
 
       &-title {
@@ -183,6 +198,10 @@
         justify-content: space-between;
         margin-bottom: 2px;
 
+        @include small-tablet {
+          width: 400px;
+        }
+
         & span {
           color: var(--light-color);
           font-family: 'Exo 2', sans-serif;
@@ -200,6 +219,10 @@
         flex-direction: row;
         justify-content: space-between;
 
+        @include small-tablet {
+          gap: 20px;
+        }
+
         &-progress,
         &-volume-select {
           width: 300px;
@@ -209,6 +232,10 @@
           appearance: none;
           transition: transform 250ms var(--default-cubic);
           overflow: hidden;
+
+          @include small-tablet {
+            width: 400px;
+          }
 
           &::-webkit-slider-thumb {
             background: var(--secondary-color);
@@ -279,6 +306,11 @@
     @include tablet {
       width: 240px;
       // height: 90px;
+    }
+
+    @include small-tablet {
+      width: 300px;
+      height: 100px;
     }
 
     &-list {
