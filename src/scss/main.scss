@@ -3,6 +3,11 @@
 @import "fonts";
 @import "settings";
 
+// common
 @import "./components/header";
+@import "./components/footer";
+
+// home
 @import "./components/home/hero";
 @import "./components/home/player";
+@import "./components/home/short";

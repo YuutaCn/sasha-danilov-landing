@@ -1,6 +1,5 @@
 .player {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   background: var(--dark-color);
 
   &-wrapper {
@@ -16,9 +15,23 @@
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 60px;
+  }
+
+  &__title {
+    color: var(--light-color);
+    font-family: 'Exo 2', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    letter-spacing: 0.11em;
   }
 
   &__cover {
@@ -60,8 +73,8 @@
 
         &-pause,
         &-play {
-          width: 40%;
-          height: 40%;
+          width: 55%;
+          height: 55%;
           fill: var(--light-color);
           filter: drop-shadow(5px 5px 9px #000000);
           transition: fill 250ms var(--default-cubic),
@@ -88,6 +101,11 @@
           fill: var(--secondary-color);
           transform: scale(1.1);
         }
+      }
+
+      &:focus {
+        outline: solid 2px var(--secondary-color);
+        outline-offset: -2px;
       }
     }
   }
