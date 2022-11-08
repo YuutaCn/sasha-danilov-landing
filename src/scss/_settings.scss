@@ -12,6 +12,7 @@ html {
   height: 100%;
   font-family: var(--font-family, sans-serif);
   -webkit-text-size-adjust: 100%;
+  color: var(--light-color);
 }
 
 .page__body {
@@ -19,12 +20,14 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
+  background: var(--dark-color);
 }
 
 img {
   height: auto;
   max-width: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 a {
