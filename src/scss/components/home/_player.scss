@@ -9,6 +9,11 @@
     justify-content: center;
     align-items: flex-start;
     gap: 15px;
+
+    @include tablet {
+      height: 90px;
+      gap: 10px;
+    }
   }
 
   &__container {
@@ -36,6 +41,10 @@
     @include big-desktop {
       font-size: 32px;
     }
+
+    @include tablet {
+      font-size: 30px;
+    }
   }
 
   &__cover {
@@ -47,6 +56,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tablet {
+      width: 90px;
+      height: 90px;
+    }
 
     &-img {
       width: 100%;
@@ -100,10 +114,12 @@
       }
 
       &:hover {
+        @include hover {
 
-        & svg {
-          fill: var(--secondary-color);
-          transform: scale(1.1);
+          & svg {
+            fill: var(--secondary-color);
+            transform: scale(1.1);
+          }
         }
       }
 
@@ -132,6 +148,11 @@
         font-size: 24px;
         line-height: 26px;
         letter-spacing: 0.11em;
+
+        @include tablet {
+          font-size: 20px;
+          line-height: 23px;
+        }
       }
 
       &-genre {
@@ -142,6 +163,11 @@
         font-size: 24px;
         line-height: 20px;
         letter-spacing: 0.11em;
+
+        @include tablet {
+          font-size: 20px;
+          line-height: 12px;
+        }
       }
     }
 
@@ -244,11 +270,16 @@
 
   &__select {
     width: 260px;
-    height: 100px;
+    height: 100%;
     overflow-y: scroll;
     background: var(--dark_second-color-30);
     border-radius: 10px;
     padding: 10px;
+
+    @include tablet {
+      width: 240px;
+      // height: 90px;
+    }
 
     &-list {
       display: flex;
@@ -270,6 +301,11 @@
           letter-spacing: 0.02em;
           cursor: pointer;
           transition: color 250ms var(--default-cubic);
+
+          @include tablet {
+            font-size: 16px;
+            line-height: 18px;
+          }
 
           &:hover {
             color: var(--secondary-color);

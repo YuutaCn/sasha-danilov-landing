@@ -11,6 +11,10 @@
     align-items: center;
     gap: 20px;
     padding: 25px 0px;
+
+    @include tablet {
+      gap: 15px;
+    }
   }
 
   &__text {
@@ -26,6 +30,11 @@
     @include big-desktop {
       width: 900px;
       font-size: 22px;
+    }
+
+    @include tablet {
+      width: 850px;
+      font-size: 20px;
     }
   }
 
@@ -50,6 +59,10 @@
 
       @include big-desktop {
         font-size: 22px;
+      }
+
+      @include tablet {
+        font-size: 20px;
       }
 
     &:hover {
