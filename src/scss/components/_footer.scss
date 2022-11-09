@@ -53,6 +53,10 @@
 
       &-item {
 
+        &.--active .footer__nav-list-item-href {
+          display: none;
+        }
+
         &-href {
           color: var(--light-color);
           font-family: 'Exo 2', sans-serif;
@@ -87,10 +91,6 @@
           &:focus {
             outline: none;
             background-size: 100% 2px;
-          }
-
-          &.--active {
-            display: none;
           }
         }
       }

@@ -77,6 +77,13 @@
 
         &-item {
 
+          &.--active {
+
+            & .burger-menu__nav-list-item-href {
+              color: var(--light-color-50);
+            }
+          }
+
           &-href {
             display: flex;
             color: var(--light-color);
@@ -100,10 +107,6 @@
               opacity: 1;
               visibility: visible;
               transform: translateY(0px) scale(1);
-            }
-
-            &.--active {
-              color: var(--light-color-50);
             }
           }
         }
