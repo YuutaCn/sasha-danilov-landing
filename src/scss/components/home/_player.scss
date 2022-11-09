@@ -279,6 +279,7 @@
           appearance: none;
           transition: transform 250ms var(--default-cubic);
           overflow: hidden;
+          cursor: pointer;
 
           @include small-tablet {
             width: 400px;

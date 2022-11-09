@@ -69,12 +69,18 @@ progressBar.oninput = function () {
     playerStatus = true;
   }
   audio.pause();
+  document.querySelector('.player__cover-pause-svg-play').classList.remove('--disable');
+  document.querySelector('.player__cover-pause-svg-pause').classList.add('--disable');
+  document.querySelector('.player__cover-pause-svg-pause').classList.remove('--active');
   playerStatus = false;
   audio.currentTime = this.value / 100 * audio.duration;
 };
 
 progressBar.onchange = function () {
   audio.play();
+  document.querySelector('.player__cover-pause-svg-play').classList.add('--disable');
+  document.querySelector('.player__cover-pause-svg-pause').classList.remove('--disable');
+  document.querySelector('.player__cover-pause-svg-pause').classList.add('--active');
   playerStatus = true;
 };
 
