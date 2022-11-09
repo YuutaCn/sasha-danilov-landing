@@ -188,3 +188,11 @@
     color: var(--secondary-color);
   }
 }
+
+.language-select {
+  display: none;
+
+  @include mobile {
+    display: flex;
+  }
+}
