@@ -11,10 +11,14 @@
     align-items: center;
     gap: 20px;
     padding: 25px 0px;
+
+    @include tablet {
+      gap: 15px;
+    }
   }
 
   &__text {
-    width: 900px;
+    width: 1000px;
     font-family: 'Exo 2', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -22,6 +26,21 @@
     line-height: 29px;
     text-align: center;
     letter-spacing: 0.11em;
+
+    @include big-desktop {
+      width: 900px;
+      font-size: 22px;
+    }
+
+    @include tablet {
+      width: 850px;
+      font-size: 20px;
+    }
+
+    @include small-tablet {
+      width: 100%;
+      font-size: 18px;
+    }
   }
 
   &__more {
@@ -42,6 +61,14 @@
       background 150ms var(--default-cubic),
       outline 250ms var(--default-cubic),
       outline-offset 250ms var(--default-cubic);
+
+      @include big-desktop {
+        font-size: 22px;
+      }
+
+      @include tablet {
+        font-size: 20px;
+      }
 
     &:hover {
       color: var(--secondary-color);

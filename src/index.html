@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="de-DE" class="page">
 @include('partials/head.html',{
-  'title':'Sasha Danilov - Künstler der Republik Moldau'
+'title':'Sasha Danilov - Künstler der Republik Moldau'
 })
+
 <body class="page__body">
   <div class="site-container">
     @include('partials/header.html')
     <main class="main">
-      <h1 class="visually-hidden">Sasha Danilov... Honored Artist of the Republic of Moldova, brilliant master of contemporary clarinet, has acquired popularity on both sides of the Atlantic. Laureate of International competitions. Winner of the International Music Award «GOLDEN STATUETTE». Honorary guest of the International Festivals «DONAFEST»</h1>
+      <h1 class="visually-hidden">Sasha Danilov... Honored Artist of the Republic of Moldova, brilliant master of
+        contemporary clarinet, has acquired popularity on both sides of the Atlantic. Laureate of International
+        competitions. Winner of the International Music Award «GOLDEN STATUETTE». Honorary guest of the International
+        Festivals «DONAFEST»</h1>
 
       @include('partials/home/hero.html')
       @include('partials/home/player.html')
       @include('partials/home/short.html')
     </main>
     @include('partials/footer.html')
+    @include('partials/burger-menu.html')
   </div>
 </body>
+
 </html>

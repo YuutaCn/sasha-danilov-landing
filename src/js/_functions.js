@@ -21,7 +21,7 @@ import { mobileCheck } from "./functions/mobile-check";
 // import './functions/fix-fullheight';
 
 // Реализация бургер-меню
-// import { burger } from './functions/burger';
+import { burger } from './functions/burger';
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
 // import { disableScroll } from './functions/disable-scroll';
@@ -39,6 +39,7 @@ import { mobileCheck } from "./functions/mobile-check";
 
 // Получение высоты шапки сайта (не забудьте вызвать функцию)
 // import { getHeaderHeight } from './functions/header-height';
+// getHeaderHeight()
 
 // Подключение плагина кастом-скролла
 // import 'simplebar';
@@ -66,7 +67,11 @@ import { mobileCheck } from "./functions/mobile-check";
 
 // Подключение плавной прокрутки к якорям
 import SmoothScroll from 'smooth-scroll';
-const scroll = new SmoothScroll('a[href*="#"]');
+const scroll = new SmoothScroll('a[href*="#"]', {
+  easing: 'easeInOutCubic',
+  speed: 1000,
+  header: '.header',
+});
 
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';

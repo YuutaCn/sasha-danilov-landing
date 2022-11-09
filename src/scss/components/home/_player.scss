@@ -9,6 +9,16 @@
     justify-content: center;
     align-items: flex-start;
     gap: 15px;
+
+    @include tablet {
+      height: 90px;
+      gap: 10px;
+    }
+
+    @include small-tablet {
+      height: 200px;
+      flex-wrap: wrap;
+    }
   }
 
   &__container {
@@ -32,6 +42,14 @@
     line-height: 43px;
     text-align: center;
     letter-spacing: 0.11em;
+
+    @include big-desktop {
+      font-size: 32px;
+    }
+
+    @include tablet {
+      font-size: 30px;
+    }
   }
 
   &__cover {
@@ -43,6 +61,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tablet {
+      width: 90px;
+      height: 90px;
+    }
+
+    @include small-tablet {
+      width: 100px;
+      height: 100px;
+    }
 
     &-img {
       width: 100%;
@@ -96,10 +124,12 @@
       }
 
       &:hover {
+        @include hover {
 
-        & svg {
-          fill: var(--secondary-color);
-          transform: scale(1.1);
+          & svg {
+            fill: var(--secondary-color);
+            transform: scale(1.1);
+          }
         }
       }
 
@@ -118,6 +148,11 @@
     justify-content: space-between;
     padding: 5px 0px;
 
+    @include tablet {
+      width: auto;
+      height: 100px;
+    }
+
     &-text {
 
       &-title {
@@ -128,6 +163,11 @@
         font-size: 24px;
         line-height: 26px;
         letter-spacing: 0.11em;
+
+        @include tablet {
+          font-size: 20px;
+          line-height: 23px;
+        }
       }
 
       &-genre {
@@ -138,6 +178,11 @@
         font-size: 24px;
         line-height: 20px;
         letter-spacing: 0.11em;
+
+        @include tablet {
+          font-size: 20px;
+          line-height: 12px;
+        }
       }
     }
 
@@ -152,6 +197,10 @@
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 2px;
+
+        @include small-tablet {
+          width: 400px;
+        }
 
         & span {
           color: var(--light-color);
@@ -170,6 +219,10 @@
         flex-direction: row;
         justify-content: space-between;
 
+        @include small-tablet {
+          gap: 20px;
+        }
+
         &-progress,
         &-volume-select {
           width: 300px;
@@ -179,6 +232,10 @@
           appearance: none;
           transition: transform 250ms var(--default-cubic);
           overflow: hidden;
+
+          @include small-tablet {
+            width: 400px;
+          }
 
           &::-webkit-slider-thumb {
             background: var(--secondary-color);
@@ -240,11 +297,21 @@
 
   &__select {
     width: 260px;
-    height: 100px;
+    height: 100%;
     overflow-y: scroll;
     background: var(--dark_second-color-30);
     border-radius: 10px;
     padding: 10px;
+
+    @include tablet {
+      width: 240px;
+      // height: 90px;
+    }
+
+    @include small-tablet {
+      width: 300px;
+      height: 100px;
+    }
 
     &-list {
       display: flex;
@@ -266,6 +333,11 @@
           letter-spacing: 0.02em;
           cursor: pointer;
           transition: color 250ms var(--default-cubic);
+
+          @include tablet {
+            font-size: 16px;
+            line-height: 18px;
+          }
 
           &:hover {
             color: var(--secondary-color);
