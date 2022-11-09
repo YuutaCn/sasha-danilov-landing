@@ -10,9 +10,9 @@
 
   &__title {
     color: var(--light-color);
-    font-family: 'Exo 2';
+      font-family: 'Exo 2',sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 24px;
     line-height: 29px;
     letter-spacing: 0.11em;
@@ -20,16 +20,22 @@
 
   &__text {
     color: var(--light-color);
-    font-family: 'Exo 2';
+
+      font-family: 'Exo 2',sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 29px;
     letter-spacing: 0.11em;
 
+    @include mobile {
+      font-size: 16px;
+      line-height: 25px;
+    }
+
     &-href {
       color: var(--secondary-color);
-      font-family: 'Exo 2';
+      font-family: 'Exo 2',sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
@@ -45,6 +51,11 @@
         background 150ms var(--default-cubic),
         outline 250ms var(--default-cubic),
         outline-offset 250ms var(--default-cubic);
+
+        @include mobile {
+          font-size: 16px;
+          line-height: 25px;
+        }
 
       &:hover {
         @include hover {
@@ -71,12 +82,17 @@
       align-items: center;
       padding-left: 10px;
       color: var(--light-color);
-      font-family: 'Exo 2';
+      font-family: 'Exo 2',sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
       line-height: 29px;
       letter-spacing: 0.11em;
+
+      @include mobile {
+        font-size: 16px;
+        line-height: 25px;
+      }
 
       &:nth-child(1) {
         padding-left: 0;
@@ -99,4 +115,10 @@
 
 
   }
+}
+
+
+.about-text-bold {
+  font-family: 'Exo 2',sans-serif;
+  font-weight: 700;
 }
