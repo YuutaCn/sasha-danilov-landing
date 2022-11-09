@@ -2,7 +2,7 @@
 // import { enableScroll } from '../functions/enable-scroll';
 
 let burgeMenuStatus = false;
-
+let timeout = 100;
 (function () {
   const burger = document?.querySelector('[data-burger]');
   const menu = document?.querySelector('[data-menu]');
@@ -12,16 +12,61 @@ let burgeMenuStatus = false;
   function openMenu() {
     burger?.classList.toggle('burger--active');
     menu?.classList.toggle('menu--active');
+    // setTimeout(() => {
+    //   menuItems[0].classList.toggle('menu--active');
+    //   menuItems[1].classList.toggle('menu--active');
+    //   menuItems[2].classList.toggle('menu--active');
+    //   setTimeout(() => {
+    //     menuItems[3].classList.toggle('menu--active');
+    //     menuItems[4].classList.toggle('menu--active');
+    //     menuItems[5].classList.toggle('menu--active');
+    //     setTimeout(() => {
+    //       menuItems[6].classList.toggle('menu--active');
+    //       menuItems[7].classList.toggle('menu--active');
+    //       menuItems[8].classList.toggle('menu--active');
+    //     }, timeout);
+    //   }, timeout);
+    // }, timeout);
     burgeMenuStatus = true;
 
     if (menu?.classList.contains('menu--active')) {
       burger?.setAttribute('aria-expanded', 'true');
       burger?.setAttribute('aria-label', 'Закрыть меню');
+      setTimeout(() => {
+        menuItems[0].classList.toggle('menu--active');
+        menuItems[1].classList.toggle('menu--active');
+        menuItems[2].classList.toggle('menu--active');
+        setTimeout(() => {
+          menuItems[3].classList.toggle('menu--active');
+          menuItems[4].classList.toggle('menu--active');
+          menuItems[5].classList.toggle('menu--active');
+          setTimeout(() => {
+            menuItems[6].classList.toggle('menu--active');
+            menuItems[7].classList.toggle('menu--active');
+            menuItems[8].classList.toggle('menu--active');
+          }, timeout);
+        }, timeout);
+      }, timeout);
       // disableScroll();
       burgeMenuStatus = true;
     } else {
       burger?.setAttribute('aria-expanded', 'false');
       burger?.setAttribute('aria-label', 'Открыть меню');
+      setTimeout(() => {
+        menuItems[6].classList.remove('menu--active');
+        menuItems[7].classList.remove('menu--active');
+        menuItems[8].classList.remove('menu--active');
+        setTimeout(() => {
+          menuItems[3].classList.remove('menu--active');
+          menuItems[4].classList.remove('menu--active');
+          menuItems[5].classList.remove('menu--active');
+          setTimeout(() => {
+            menuItems[0].classList.remove('menu--active');
+            menuItems[1].classList.remove('menu--active');
+            menuItems[2].classList.remove('menu--active');
+          }, timeout);
+        }, timeout);
+      }, 0);
       // enableScroll();
       burgeMenuStatus = false;
     }
@@ -32,6 +77,21 @@ let burgeMenuStatus = false;
     burger?.setAttribute('aria-label', 'Открыть меню');
     burger.classList.remove('burger--active');
     menu.classList.remove('menu--active');
+    setTimeout(() => {
+      menuItems[6].classList.remove('menu--active');
+      menuItems[7].classList.remove('menu--active');
+      menuItems[8].classList.remove('menu--active');
+      setTimeout(() => {
+        menuItems[3].classList.remove('menu--active');
+        menuItems[4].classList.remove('menu--active');
+        menuItems[5].classList.remove('menu--active');
+        setTimeout(() => {
+          menuItems[0].classList.remove('menu--active');
+          menuItems[1].classList.remove('menu--active');
+          menuItems[2].classList.remove('menu--active');
+        }, timeout);
+      }, timeout);
+    }, 0);
     // enableScroll();
     burgeMenuStatus = false;
   }
@@ -50,6 +110,7 @@ let burgeMenuStatus = false;
       burger?.setAttribute('aria-label', 'Открыть меню');
       burger.classList.remove('burger--active');
       menu.classList.remove('menu--active');
+      menuItems?.forEach(el => el.classList.remove('menu--active'));
       // enableScroll();
       burgeMenuStatus = false;
     });

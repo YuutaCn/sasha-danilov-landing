@@ -18,13 +18,23 @@
           <a href="/contact" class="header__nav-list-item-href en">contact</a>
         </li>
         <li class="header__nav-list-item">
-          <select class="header__nav-list-item-lang" name="change language" id="language">
-            <option value="de" data-language>DE</option>
-            <option value="en" data-language>EN</option>
-            <option value="ru" data-language>RU</option>
+          <select class="header__nav-list-item-lang" name="change language" data-language>
+            <option value="de">DE</option>
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
           </select>
         </li>
       </ul>
     </nav>
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </button>
+    <select class="language-select" name="change language" data-language>
+      <option value="de">DE</option>
+      <option value="en">EN</option>
+      <option value="ru">RU</option>
+    </select>
   </div>
 </header>

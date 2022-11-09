@@ -1,0 +1,95 @@
+.burger {
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0px;
+
+
+
+  &__line {
+    width: 100%;
+    height: 2px;
+    background: var(--light-color);
+  }
+
+  &-menu {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 666;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    background: var(--dark-color);
+    transition: opacity 250ms var(--default-cubic) 170ms,
+      visibility 250ms var(--default-cubic) 170ms;
+
+
+    &.menu--active {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 250ms var(--default-cubic),
+        visibility 250ms var(--default-cubic);
+    }
+
+    &__container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__nav {
+
+      &-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        margin-bottom: 300px;
+
+        &-item {
+
+          &-href {
+            display: flex;
+            color: var(--light-color);
+            font-family: 'Exo 2', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            letter-spacing: 0.11em;
+            text-transform: uppercase;
+            transform: translateY(77px) scale(0.7);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 100ms var(--default-cubic),
+              visibility 100ms var(--default-cubic),
+              transform 100ms var(--default-cubic);
+            will-change: transorm, opacity, visibility;
+
+
+            &.menu--active {
+              opacity: 1;
+              visibility: visible;
+              transform: translateY(0px) scale(1);
+            }
+
+            &.--active {
+              color: var(--light-color-50);
+            }
+          }
+        }
+      }
+    }
+  }
+}
