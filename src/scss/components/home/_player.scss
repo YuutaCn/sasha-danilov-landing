@@ -146,7 +146,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 5px 0px;
+    padding: 3px 0px;
 
     @include tablet {
       width: auto;
@@ -160,7 +160,7 @@
         font-family: "Exo 2", sans-serif;
         font-style: normal;
         font-weight: 600;
-        font-size: 24px;
+        font-size: 22px;
         line-height: 26px;
         letter-spacing: 0.11em;
 
@@ -175,7 +175,7 @@
         font-family: 'Exo 2', sans-serif;
         font-style: normal;
         font-weight: 300;
-        font-size: 24px;
+        font-size: 22px;
         line-height: 20px;
         letter-spacing: 0.11em;
 

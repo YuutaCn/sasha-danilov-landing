@@ -12,21 +12,6 @@ let timeout = 100;
   function openMenu() {
     burger?.classList.toggle('burger--active');
     menu?.classList.toggle('menu--active');
-    // setTimeout(() => {
-    //   menuItems[0].classList.toggle('menu--active');
-    //   menuItems[1].classList.toggle('menu--active');
-    //   menuItems[2].classList.toggle('menu--active');
-    //   setTimeout(() => {
-    //     menuItems[3].classList.toggle('menu--active');
-    //     menuItems[4].classList.toggle('menu--active');
-    //     menuItems[5].classList.toggle('menu--active');
-    //     setTimeout(() => {
-    //       menuItems[6].classList.toggle('menu--active');
-    //       menuItems[7].classList.toggle('menu--active');
-    //       menuItems[8].classList.toggle('menu--active');
-    //     }, timeout);
-    //   }, timeout);
-    // }, timeout);
     burgeMenuStatus = true;
 
     if (menu?.classList.contains('menu--active')) {

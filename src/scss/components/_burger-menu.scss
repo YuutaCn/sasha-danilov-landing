@@ -27,8 +27,8 @@
     opacity: 0;
     visibility: hidden;
     background: var(--dark-color);
-    transition: opacity 250ms var(--default-cubic) 170ms,
-      visibility 250ms var(--default-cubic) 170ms;
+    transition: opacity 250ms var(--default-cubic) 100ms,
+      visibility 250ms var(--default-cubic) 100ms;
 
 
     &.menu--active {
@@ -72,9 +72,9 @@
             transform: translateY(77px) scale(0.7);
             opacity: 0;
             visibility: hidden;
-            transition: opacity 100ms var(--default-cubic),
-              visibility 100ms var(--default-cubic),
-              transform 100ms var(--default-cubic);
+            transition: opacity 200ms var(--default-cubic),
+              visibility 200ms var(--default-cubic),
+              transform 200ms var(--default-cubic);
             will-change: transorm, opacity, visibility;
 
 
