@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  height: 105px;
+  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,7 +10,7 @@
   transition: background 600ms ease-in-out;
 
   @include big-desktop {
-    height: 90px;
+    height: 70px;
   }
 
   @include tablet {
@@ -30,7 +30,7 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 
     @include mobile {
@@ -60,7 +60,7 @@
           font-family: 'Exo 2', sans-serif;
           font-style: normal;
           font-weight: 500;
-          font-size: 36px;
+          font-size: 30px;
           line-height: 43px;
           letter-spacing: 0.11em;
           text-transform: uppercase;
@@ -75,7 +75,7 @@
             outline-offset 250ms var(--default-cubic);
 
           @include big-desktop {
-            font-size: 32px;
+            font-size: 26px;
           }
 
           @include tablet {
@@ -109,7 +109,7 @@
           font-family: 'Exo 2', sans-serif;
           font-style: normal;
           font-weight: 700;
-          font-size: 36px;
+          font-size: 30px;
           line-height: 43px;
           letter-spacing: 0.11em;
           background: transparent;
@@ -120,7 +120,7 @@
             transform 250ms var(--default-cubic);
 
             @include big-desktop {
-              font-size: 32px;
+              font-size: 26px;
             }
 
             @include tablet {
@@ -147,6 +147,7 @@
 }
 
 .language-select {
+  display: none;
   height: 100%;
   color: var(--light-color);
   font-family: 'Exo 2', sans-serif;
@@ -162,16 +163,8 @@
   transition: color 250ms var(--default-cubic),
     transform 250ms var(--default-cubic);
 
-    @include big-desktop {
-      font-size: 32px;
-    }
-
-    @include tablet {
-      font-size: 24px;
-    }
-
     @include mobile {
-      font-size: 22px;
+      display: flex;
     }
 
   &::-ms-expand {
@@ -186,5 +179,13 @@
   &:focus {
     outline: none;
     color: var(--secondary-color);
+  }
+}
+
+.language-select {
+  display: none;
+
+  @include mobile {
+    display: flex;
   }
 }

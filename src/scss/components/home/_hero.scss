@@ -35,6 +35,13 @@
       gap: 25px;
     }
 
+    @include mobile {
+      height: 100%;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 70px 0px 100px 0px;
+    }
+
     &-name {
       color: var(--light-color);
       font-family: 'Russo One', sans-serif;
@@ -50,6 +57,10 @@
 
       @include tablet {
         font-size: 36px;
+      }
+
+      @include mobile {
+        font-size: 24px;
       }
     }
 
@@ -73,6 +84,11 @@
       @include tablet {
         width: 50px;
         height: 50px;
+      }
+
+      @include mobile {
+        width: 40px;
+        height: 40px;
       }
 
       &:hover {
