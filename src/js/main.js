@@ -5,6 +5,7 @@ import './_components';
 
 
 import './components/language';
+import './components/page-checker';
 import './components/header-scroll';
 if (document.querySelector('.player')) {
   import('./components/player');

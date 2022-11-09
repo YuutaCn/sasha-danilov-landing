@@ -7,7 +7,9 @@
   z-index: 999999;
   background: linear-gradient(180deg, var(--dark-color) 0%, rgba(0, 0, 0, 0) 100%);
   background-size: 100% 100%;
-  transition: background 600ms ease-in-out;
+  border-bottom: solid 0px var(--dark_second-color);
+  transition: background 600ms ease-in-out,
+    border 250ms var(--default-cubic);
 
   @include big-desktop {
     height: 70px;
@@ -23,6 +25,7 @@
 
   &.--scroll {
     background-size: 100% 1000%;
+    border-bottom: solid 2px var(--dark_second-color);
   }
 
   &__container {
@@ -30,7 +33,7 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: start;
     align-items: center;
 
     @include mobile {
@@ -54,6 +57,14 @@
       }
 
       &-item {
+
+        &.--active>&-href {
+          color: var(--light-color-50);
+          background-size: 0% 2px;
+          pointer-events: none;
+          cursor: default;
+          outline: none;
+        }
 
         &-href {
           color: var(--light-color);
@@ -93,14 +104,6 @@
             outline: none;
             background-size: 100% 2px;
           }
-
-          &.--active {
-            color: var(--light-color-50);
-            background-size: 0% 2px;
-            pointer-events: none;
-            cursor: default;
-            outline: none;
-          }
         }
 
         &-lang {
@@ -119,13 +122,13 @@
           transition: color 250ms var(--default-cubic),
             transform 250ms var(--default-cubic);
 
-            @include big-desktop {
-              font-size: 26px;
-            }
+          @include big-desktop {
+            font-size: 26px;
+          }
 
-            @include tablet {
-              font-size: 24px;
-            }
+          @include tablet {
+            font-size: 24px;
+          }
 
           &::-ms-expand {
             display: none;
@@ -163,9 +166,9 @@
   transition: color 250ms var(--default-cubic),
     transform 250ms var(--default-cubic);
 
-    @include mobile {
-      display: flex;
-    }
+  @include mobile {
+    display: flex;
+  }
 
   &::-ms-expand {
     display: none;
