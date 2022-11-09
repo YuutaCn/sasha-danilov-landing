@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de-DE" class="page">
+@include('partials/head.html',{
+'title':'Sasha Danilov - Über'
+})
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <h1 class="visually-hidden">Sasha Danilov... Honored Artist of the Republic of Moldova, brilliant master of
+        contemporary clarinet, has acquired popularity on both sides of the Atlantic. Laureate of International
+        competitions. Winner of the International Music Award «GOLDEN STATUETTE». Honorary guest of the International
+        Festivals «DONAFEST»</h1>
+
+        @include('partials/about/hero.html')
+        <section class="about" id="about">
+          @include('partials/about/about-de.html')
+          @include('partials/about/about-ru.html')
+          @include('partials/about/about-en.html')
+        </section>
+    </main>
+    @include('partials/footer.html')
+    @include('partials/burger-menu.html')
+  </div>
+</body>
+
+</html>
