@@ -358,7 +358,6 @@
 
     @include tablet {
       width: 240px;
-      // height: 90px;
     }
 
     @include small-tablet {
@@ -369,7 +368,7 @@
     @include mobile {
       width: 100%;
       position: relative;
-      top: -31px;
+      top: -10px;
     }
 
     &-list {
