@@ -7,11 +7,19 @@
   &-home-background {
     position: absolute;
     z-index: 0;
-    left: 0;
+    right: 0;
     top: 0;
-    width: 100%;
+    width: 55%;
     height: 100%;
     pointer-events: none;
+
+    @include mobile {
+      width: 100%;
+      height: 81.5%;
+      bottom: 0;
+      position: absolute;
+      margin-top: auto;
+    }
   }
 
   &__container {
@@ -22,7 +30,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
   }
 
   &__desc {
@@ -37,8 +45,9 @@
 
     @include mobile {
       height: 100%;
-      justify-content: space-between;
-      align-items: flex-end;
+      gap: 10px;
+      // justify-content: space-between;
+      align-items: flex-start;
       padding: 70px 0px 100px 0px;
     }
 
