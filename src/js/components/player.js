@@ -6,8 +6,7 @@ const player = document.querySelector('.player'),
   fullTime = document.querySelector('.player__info-nav-time-full'),
   volumeBtn = document.querySelector('.player__info-nav-controls-volume-btn'),
   volumeSelect = document.querySelector('.player__info-nav-controls-volume-select'),
-  audio = document.querySelector('.player__audio'),
-  changeOnList = document.querySelector('.player__select-list-item-href')
+  audio = document.querySelector('.player__audio')
 
 let playerStatus = false;
 let volumeStatus = true;
@@ -31,7 +30,6 @@ function playComposition() {
     document.querySelector('.player__cover-pause-svg-play').classList.add('--disable');
     document.querySelector('.player__cover-pause-svg-pause').classList.remove('--disable');
     document.querySelector('.player__cover-pause-svg-pause').classList.add('--active');
-    changeOnList.classList.add('--active');
     setTimeout(() => {
       updateFullTime(fullTime, audio.duration);
     }, 1000);
@@ -47,7 +45,6 @@ function playComposition() {
 playBtn.addEventListener('click', playComposition);
 
 // change on list
-changeOnList.addEventListener('click', playComposition);
 
 // Progress bar
 audio.addEventListener('timeupdate', function(e) {
