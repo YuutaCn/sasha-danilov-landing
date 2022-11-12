@@ -1,0 +1,14 @@
+.el-anim {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50px) scale(0.9);
+  transition: opacity 600ms var(--default-cubic),
+    visibility 600ms var(--default-cubic),
+    transform 600ms var(--default-cubic);
+
+  &.scroll--show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+}
